@@ -1,2 +1,8 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# Feidinata Artandi - H1D023115 - D - B
+
+Penjelasan aplikasi :
+Aplikasi konversi suhu ini adalah program konsol interaktif sederhana yang ditulis dalam bahasa Dart. Fungsi utamanya adalah menerima input berupa nilai suhu dan dua skala (awal dan tujuan) dari pengguna, lalu menghitung konversi menggunakan rumus fisika standar. Karena aplikasi ini memerlukan interaksi dengan user melalui terminal, ia memanfaatkan import 'dart:io';, library bawaan Dart yang menyediakan kemampuan untuk menerima input (stdin.readLineSync) dan menampilkan output (stdout.write).
+
+Logika inti program ini distrukturkan dalam dua langkah utama menggunakan Celsius (C) sebagai skala basis perantara. Pertama, semua suhu awal (dari Fahrenheit, Reamur, atau Kelvin) diubah terlebih dahulu menjadi nilai Celsius. Langkah ini menyederhanakan kode karena programmer tidak perlu menulis rumus untuk setiap kombinasi konversi (misalnya, R ke F, F ke K, dll.). Kedua, nilai Celsius tersebut kemudian diubah menjadi skala tujuan akhir. Pemilihan rumus konversi yang tepat diatur menggunakan switch statement, yang memungkinkan kode yang lebih rapi dan terorganisir dibandingkan dengan banyak if/else bertumpuk.
+
+Selain perhitungan, aplikasi ini juga memasukkan validasi input melalui fungsi pembantu yang menggunakan while loop dan blok try-catch. Tujuannya adalah memastikan bahwa pengguna hanya memasukkan nilai numerik yang valid untuk suhu dan memilih salah satu skala yang didukung (C, F, R, atau K). Jika input tidak sesuai, program akan meminta pengguna memasukkan data ulang. Struktur ini membuat aplikasi menjadi kuat (robust) dan ramah pengguna, mencegah crash akibat kesalahan input.
